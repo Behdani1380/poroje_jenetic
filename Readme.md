@@ -15,3 +15,7 @@ Each solution (or "individual") is a list of numbers representing the row positi
 The fitness function calculates the number of conflicts (attacks) between the queens.
 The fewer the conflicts, the better the solution. 
 If the fitness is 0, there are no conflicts, and we have found a valid solution.
+
+3.Parent Selection
+To generate the next generation, two parents are selected randomly, 
+but with a preference for parents with better fitness (lower fitness value).
