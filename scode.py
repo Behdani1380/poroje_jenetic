@@ -21,3 +21,9 @@ def fitness(individual):
             if individual[i] == individual[j] or abs(individual[i] - individual[j]) == abs(i - j):
                 clashes += 1
     return clashes
+
+
+# تابع برای انتخاب والدین
+def select_parents(population):
+    weights = [1 / (1 + fitness(ind)) for ind in population]
+    return random.choices(population, weights=weights, k=2)
