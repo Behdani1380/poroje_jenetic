@@ -1,4 +1,4 @@
-seyeseh zeynab behdani :
+seyedeh zeynab behdani :
 
 This project solves the classic 8 Queens Problem using a Genetic Algorithm. 
 The goal is to place 8 queens on an 8×8 chessboard such that no two queens threaten each other. 
