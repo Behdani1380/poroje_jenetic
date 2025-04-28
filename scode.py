@@ -40,7 +40,7 @@ def crossover(parent1, parent2):
 def mutate(individual):
     idx1, idx2 = random.sample(range(N), 2)
     individual[idx1], individual[idx2] = individual[idx2], individual[idx1]
-    
+
     # تابع اصلی الگوریتم ژنتیک
 def genetic_algorithm(pop_size, generations):
     population = create_population(pop_size)
@@ -62,3 +62,5 @@ def genetic_algorithm(pop_size, generations):
     print('No solution found')
     return None
 
+# اجرای الگوریتم
+genetic_algorithm(pop_size=100, generations=1000)
