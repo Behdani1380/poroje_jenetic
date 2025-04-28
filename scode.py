@@ -35,7 +35,30 @@ def crossover(parent1, parent2):
     child1 = parent1[:point] + [gene for gene in parent2 if gene not in parent1[:point]]
     child2 = parent2[:point] + [gene for gene in parent1 if gene not in parent2[:point]]
     return child1, child2
+
     # تابع برای جهش
 def mutate(individual):
     idx1, idx2 = random.sample(range(N), 2)
     individual[idx1], individual[idx2] = individual[idx2], individual[idx1]
+    
+    # تابع اصلی الگوریتم ژنتیک
+def genetic_algorithm(pop_size, generations):
+    population = create_population(pop_size)
+    for generation in range(generations):
+        population = sorted(population, key=fitness)
+        if fitness(population[0]) == 0:
+            print(f'Solution found in generation {generation}: {population[0]}')
+            return population[0]
+        new_population = population[:2]  # والدین را نگه می‌داریم
+        while len(new_population) < pop_size:
+            parent1, parent2 = select_parents(population)
+            child1, child2 = crossover(parent1, parent2)
+            if random.random() < 0.1:  # احتمال جهش
+                mutate(child1)
+            if random.random() < 0.1:  # احتمال جهش
+                mutate(child2)
+            new_population.extend([child1, child2])
+        population = new_population
+    print('No solution found')
+    return None
+
