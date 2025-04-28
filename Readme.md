@@ -33,6 +33,13 @@ Ensures each queen appears exactly once in each column
 Produces two children by swapping parent roles
 
 
+5.With default 10% probability, swaps two randomly selected queens
+
+Maintains permutation validity (no duplicate queens in columns)
+
+Introduces diversity to escape local optima
+
+Mutation rate is tunable (typically between 1-10%)
 
 
 
