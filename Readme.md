@@ -43,3 +43,19 @@ Mutation rate is tunable (typically between 1-10%)
 
 
 
+6.Initialization: Creates random population of solutions
+
+Generational Loop:
+
+Sorts population by fitness (conflict count)
+
+Returns immediately if perfect solution found (0 conflicts)
+
+Implements elitism by preserving the best solution
+
+Fills new population through selection, crossover and mutation
+
+Termination: Returns None if no solution found after all generations
+
+
+
