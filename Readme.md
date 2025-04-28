@@ -16,3 +16,23 @@ If the fitness is 0, there are no conflicts, and we have found a valid solution.
 3.Parent Selection
 To generate the next generation, two parents are selected randomly, 
 but with a preference for parents with better fitness (lower fitness value).
+
+
+
+elaheh afsharnasab:
+
+
+4.Uses ordered crossover to preserve valid permutations
+
+Selects a random crossover point between columns
+
+Takes the first segment from one parent and fills remaining positions from the other parent
+
+Ensures each queen appears exactly once in each column
+
+Produces two children by swapping parent roles
+
+
+
+
+
